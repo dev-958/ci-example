@@ -11,9 +11,10 @@
 
     <groupId>org.dev-985</groupId>
     <artifactId>ci-example</artifactId>
-    <version>0.0.1.${revision}</version>
+    <version>1.1.0${revision}</version>
     <name>ci-example</name>
     <description>Demo project for Spring Boot</description>
+    <packaging>pom</packaging>
 
     <properties>
         <java.version>11</java.version>
@@ -37,5 +38,25 @@
         <module>sub-module1</module>
         <module>sub-module2</module>
     </modules>
+
+    <scm>
+        <!-- <connection>scm:git:https://github.com/dev-958/ci-example.git</connection> -->
+        <developerConnection>scm:git:ssh://git@github.com:dev-958/ci-example.git</developerConnection>
+        <url>https://github.com/dev-958/ci-example</url>
+    </scm>
+
+    <distributionManagement>
+        <!-- in order to use this, one must have nexus up and running on a given url -->
+        <repository>
+            <!-- Snapshot repositories can be build on each commit to develop branch -->
+            <id>sample-release-repository</id>
+            <url>http://127.0.0.1:8081/repository/maven-sample-release/</url>
+        </repository>
+        <snapshotRepository>
+            <!-- Snapshot repositories can be build on each commit to develop branch -->
+            <id>sample-snapshot-repository</id>
+            <url>http://127.0.0.1:8081/repository/maven-sample-snapshot/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>

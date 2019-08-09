@@ -1,3 +1,7 @@
 .idea\
 target
 ci-example.iml
+sub-module1/.flattened-pom.xml
+sub-module1/sub-module1.iml
+sub-module2/.flattened-pom.xml
+sub-module2/sub-module2.iml
