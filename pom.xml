@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.7.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>org.dev-985</groupId>
+    <artifactId>ci-example</artifactId>
+    <version>0.0.1.${revision}</version>
+    <name>ci-example</name>
+    <description>Demo project for Spring Boot</description>
+
+    <properties>
+        <java.version>11</java.version>
+        <!-- Sane default when no revision property is passed in from the command line -->
+        <revision>-SNAPSHOT</revision>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+
+        <!--begin tags for by maven-scm-plugin -->
+        <!-- we use different names for tags and refs in order to avoid  refspec  matches more than one problem.-->
+        <tag>RELEASE-${project.version}</tag>
+        <branch>${project.version}</branch>
+        <!-- <pushChanges>false</pushChanges> uncomment if you don't want to push to git, e.g. when debugging your pipeline -->
+        <!--end tags for by maven-scm-plugin -->
+    </properties>
+
+    <modules>
+        <module>sub-module1</module>
+        <!--module>sub-module2</module-->
+    </modules>
+
+</project>
