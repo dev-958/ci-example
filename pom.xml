@@ -35,7 +35,7 @@
 
     <modules>
         <module>sub-module1</module>
-        <!--module>sub-module2</module-->
+        <module>sub-module2</module>
     </modules>
 
 </project>

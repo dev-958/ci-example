@@ -1,4 +1,4 @@
-package org.dev985.ciexample.submodule1;
+package org.dev985.ciexample.submodule2;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,10 +7,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class CiExampleApplicationTests {
+public class Module2ApplicationTests {
 
-	@Test
-	public void contextLoads() {
-	}
+    @Test
+    public void contextLoads() {
+    }
 
 }
