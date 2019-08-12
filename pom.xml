@@ -11,7 +11,7 @@
 
     <groupId>org.dev-985</groupId>
     <artifactId>ci-example</artifactId>
-    <version>1.1.0${revision}</version>
+    <version>1.1.0-${revision}</version>
     <name>ci-example</name>
     <description>Demo project for Spring Boot</description>
     <packaging>pom</packaging>
@@ -19,7 +19,7 @@
     <properties>
         <java.version>11</java.version>
         <!-- Sane default when no revision property is passed in from the command line -->
-        <revision>-SNAPSHOT</revision>
+        <revision>SNAPSHOT</revision>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -28,9 +28,9 @@
 
         <!--begin tags for by maven-scm-plugin -->
         <!-- we use different names for tags and refs in order to avoid  refspec  matches more than one problem.-->
-        <tag>RELEASE-${project.version}</tag>
+        <tag>${project.version}</tag>
         <branch>${project.version}</branch>
-        <!-- <pushChanges>false</pushChanges> uncomment if you don't want to push to git, e.g. when debugging your pipeline -->
+        <pushChanges>false</pushChanges><!-- uncomment if you don't want to push to git, e.g. when debugging your pipeline -->
         <!--end tags for by maven-scm-plugin -->
     </properties>
 
@@ -49,12 +49,14 @@
         <!-- in order to use this, one must have nexus up and running on a given url -->
         <repository>
             <!-- Snapshot repositories can be build on each commit to develop branch -->
-            <id>sample-release-repository</id>
+            <id>nexus</id>
+            <name>releases</name>
             <url>http://127.0.0.1:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <!-- Snapshot repositories can be build on each commit to develop branch -->
-            <id>sample-snapshot-repository</id>
+            <id>nexus</id>
+            <name>snapshots</name>
             <url>http://127.0.0.1:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>

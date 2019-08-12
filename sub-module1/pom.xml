@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.dev-985</groupId>
         <artifactId>ci-example</artifactId>
-        <version>1.1.0${revision}</version>
+        <version>1.1.0-${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
