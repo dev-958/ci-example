@@ -28,7 +28,8 @@
 
         <!--begin tags for by maven-scm-plugin -->
         <!-- we use different names for tags and refs in order to avoid  refspec  matches more than one problem.-->
-        <tag>${project.version}</tag>
+        <!--suppress UnresolvedMavenProperty -->
+        <tag>${project.version}.${git.commit.id.abbrev}</tag>
         <branch>${project.version}</branch>
         <pushChanges>false</pushChanges><!-- uncomment if you don't want to push to git, e.g. when debugging your pipeline -->
         <!--end tags for by maven-scm-plugin -->
