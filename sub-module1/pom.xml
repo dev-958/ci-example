@@ -67,7 +67,15 @@
                 <version>1.4.10</version>
                 <executions>
                     <execution>
-                        <id>default</id>
+                        <phase>install</phase>
+                        <id>cache</id>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <phase>deploy</phase>
+                        <id>ar</id>
                         <goals>
                             <goal>build</goal>
                             <goal>push</goal>
@@ -75,7 +83,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <repository>${project.artifactId}</repository>
+                    <repository>ci-example/${project.artifactId}</repository>
                     <dockerfile>Dockerfile</dockerfile>
                     <!--suppress UnresolvedMavenProperty -->
                     <tag>${git.commit.id.abbrev}</tag>
