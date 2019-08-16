@@ -31,7 +31,7 @@
 
     <profiles>
         <profile>
-            <id>pu</id>
+            <id>pi</id>
             <build>
                 <plugins>
                     <plugin>

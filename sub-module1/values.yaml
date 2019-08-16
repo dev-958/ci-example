@@ -1,1 +1,0 @@
-imageTag: ${git.commit.id.abbrev}-SNAPSHOT
