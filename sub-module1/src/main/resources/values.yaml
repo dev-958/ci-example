@@ -1,1 +1,1 @@
-dockerTag: @git.commit.id.abbrev@
+imageTag: @dockerTag@

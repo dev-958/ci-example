@@ -31,7 +31,7 @@
 
     <profiles>
         <profile>
-            <id>dep</id>
+            <id>pu</id>
             <build>
                 <plugins>
                     <plugin>
@@ -158,7 +158,8 @@
                 <configuration>
                     <repository>ci-example/${project.artifactId}</repository>
                     <dockerfile>Dockerfile</dockerfile>
-                    <tag>${dockerTag}</tag>
+                    <!--suppress UnresolvedMavenProperty -->
+                    <tag>${imageTag}</tag>
                     <buildArgs>
                         <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>
