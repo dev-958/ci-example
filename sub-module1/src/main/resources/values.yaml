@@ -1,1 +1,1 @@
-imageTag: @dockerTag@
+imageTag: @dockerTag@-@revision@

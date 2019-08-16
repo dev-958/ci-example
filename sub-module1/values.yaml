@@ -1,1 +1,1 @@
-imageTag: 3c04e1b
+imageTag: ${git.commit.id.abbrev}-SNAPSHOT
