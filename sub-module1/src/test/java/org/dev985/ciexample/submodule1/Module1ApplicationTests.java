@@ -2,7 +2,7 @@ package org.dev985.ciexample.submodule1;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.boot.SpringBootConfiguration;
+//import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -14,9 +14,9 @@ public class Module1ApplicationTests {
 	public void contextLoads() {
 	}
 
-	@SpringBootConfiguration
-	private static class Config {
-		public Config() {}
-	}
+//	@SpringBootConfiguration
+//	private static class Config {
+//		public Config() {}
+//	}
 
 }

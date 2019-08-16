@@ -1,0 +1,5 @@
+${AnsiColor.BLUE} ===========================================================================================================
+${AnsiColor.GREEN}                                     ${application.title}
+${AnsiColor.MAGENTA}                                    ${application.formatted-version}
+${AnsiColor.BLUE}                                     image.tag
+${AnsiColor.BLUE} ===========================================================================================================

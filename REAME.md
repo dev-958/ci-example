@@ -4,7 +4,7 @@ Simple multi-module micro-service example
 Key features:
 -------------
 
-* Major version controlled in one place in master pom
+* Major version controlled in one place (in the parent pom)
 
 * Individual submodules can be advanced and pushed by local tags for snapshots i.e. *87daa93-SNAPSHOT*
 
@@ -13,6 +13,8 @@ Key features:
 * Builds executable jars and tagged images
 
 * Writes artifacts to nexus
+
+* Displays version and tagging identifiers in log header
 
 * Easy to use
 
