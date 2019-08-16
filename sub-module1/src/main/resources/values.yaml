@@ -1,1 +1,1 @@
-imageTag: @dockerTag@-@revision@
+imageTag: @git.commit.id.abbrev@-@revision@
