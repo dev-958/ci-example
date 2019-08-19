@@ -130,7 +130,7 @@
                         <replacement>
                             <token>image.tag</token>
                             <!--suppress UnresolvedMavenProperty -->
-                            <value>${imageTag}</value>
+                            <value>${image.tag}</value>
                         </replacement>
                     </replacements>
                 </configuration>
@@ -164,7 +164,7 @@
                     <repository>ci-example/${project.artifactId}</repository>
                     <dockerfile>Dockerfile</dockerfile>
                     <!--suppress UnresolvedMavenProperty -->
-                    <tag>${imageTag}</tag>
+                    <tag>${image.tag}</tag>
                     <buildArgs>
                         <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>

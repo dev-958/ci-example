@@ -1,1 +1,22 @@
-imageTag: @git.commit.id.abbrev@-@revision@
+replicaCount: 1
+
+service:
+  type: ClusterIP
+  port: 80
+
+image:
+  repository: ci-example
+  tag: @git.commit.id.abbrev@-@revision@
+  pullPolicy: IfNotPresent
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+nodeSelector: {}
+tolerations: []
+affinity: {}

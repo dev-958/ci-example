@@ -4,11 +4,9 @@ service:
   type: ClusterIP
   port: 80
 
-imageTag: 1ba821c-SNAPSHOT
-
 image:
   repository: ci-example
-  tag: 1ba821c-SNAPSHOT
+  tag: 9c0ff81-SNAPSHOT
   pullPolicy: IfNotPresent
 
 resources:

@@ -4,8 +4,6 @@ service:
   type: ClusterIP
   port: 80
 
-imageTag: @git.commit.id.abbrev@-@revision@
-
 image:
   repository: ci-example
   tag: @git.commit.id.abbrev@-@revision@
