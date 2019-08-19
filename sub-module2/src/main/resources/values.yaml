@@ -1,0 +1,1 @@
+imageTag: @git.commit.id.abbrev@-@revision@
