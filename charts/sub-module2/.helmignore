@@ -5,6 +5,14 @@
 # Common VCS dirs
 .git/
 .gitignore
+.bzr/
+.bzrignore
+.hg/
+.hgignore
+.svn/
+# Common backup files
+*.swp
+*.bak
 *.tmp
 *~
 # Various IDEs
@@ -12,5 +20,3 @@
 .idea/
 *.tmproj
 .vscode/
-/sub-module1/
-/sub-module2/

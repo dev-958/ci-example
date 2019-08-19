@@ -1,1 +1,24 @@
-imageTag: 386a29e-SNAPSHOT
+replicaCount: 1
+
+service:
+  type: ClusterIP
+  port: 80
+
+imageTag: 1ba821c-SNAPSHOT
+
+image:
+  repository: ci-example
+  tag: 1ba821c-SNAPSHOT
+  pullPolicy: IfNotPresent
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
