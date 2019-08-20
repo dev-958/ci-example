@@ -1,11 +1,11 @@
 replicaCount: 1
 
 service:
-  port: 31111
+  port: 8080
 
 image:
   repository: ci-example
-  tag: 53ce0ae-SNAPSHOT
+  tag: 2581449-SNAPSHOT
   pullPolicy: IfNotPresent
 
 resources:
