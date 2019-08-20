@@ -1,12 +1,11 @@
 replicaCount: 1
 
 service:
-  type: ClusterIP
-  port: 80
+  port: 31111
 
 image:
   repository: ci-example
-  tag: 9c0ff81-SNAPSHOT
+  tag: 53ce0ae-SNAPSHOT
   pullPolicy: IfNotPresent
 
 resources:

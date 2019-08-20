@@ -12,7 +12,9 @@ spec:
     - port: {{ .Values.service.port }}
       targetPort: 8080
       protocol: TCP
+      nodePort: 31111
       name: http
+  type: NodePort
   selector:
     app.kubernetes.io/name: {{ include "sub-module1.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
